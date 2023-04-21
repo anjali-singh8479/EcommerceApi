@@ -26,7 +26,7 @@ default:1
     type:Number,
     require:true
    },
-   Address:{
+   address:{
     type:Object
    },
 status:{

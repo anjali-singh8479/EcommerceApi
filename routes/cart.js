@@ -4,13 +4,13 @@ const cryptoJS=require("crypto-js")
 const router = require("express").Router();
 
 //create cart
-router.post("/cart",verifytoken,async(req,res)=>{
+router.post("/cart",async(req,res)=>{
    const newcart= await new cart(req.body)
    const savedcart= await newcart.save()
    try{
     res.status(200).json({
         success:true,
-        message:"product created",
+        message:"cart created",
         savedcart
     })
    }

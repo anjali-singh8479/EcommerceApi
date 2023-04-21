@@ -47,6 +47,22 @@ router.put("updateproduct/:id",verifyAndAdmin,async(req,res)=>{
    })
    }
 })
+//delete product
+router.delete("/deleteproduct/:id",async(req,res)=>{
+   try{
+    await product.findByIdAndDelete(req.params.id)
+    res.status(200).json({
+        success:true,
+        message:"product deleted successfully"
+    })
+   }
+   catch(err){
+    res.status(500).json({
+        success:false,
+        message:err.message
+    })
+   }
+})
 
 //get product
 router.get("/find/:id",async(req,res)=>{
