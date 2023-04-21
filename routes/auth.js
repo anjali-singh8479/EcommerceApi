@@ -11,6 +11,7 @@ router.post("/register", async (req, res) => {
       username: req.body.username,
       email: req.body.email,
       password: req.body.password,
+      isadmin:req.body.isadmin
     });
  const hashedpassword= await cryptoJS.AES.encrypt(req.body.password,process.env.PASSWORD_SECRET)
     newuser.password=hashedpassword;

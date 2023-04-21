@@ -25,8 +25,9 @@ const verifyAndAuthorization = (req, res, next) => {
   });
 };
 const verifyAndAdmin = async (req, res, next) => {
-  verifyAndAuthorization(req, res, () => {
-    if (req.user.isadmin) {
+  verifytoken(req, res, () => {
+    if (!req.user.isadmin) {
+     
       next();
     } else {
       res.status(400).json("you are not an admin");
