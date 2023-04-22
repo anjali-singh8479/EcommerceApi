@@ -14,7 +14,7 @@ console.log(token)
   useEffect(()=>{
     const makereq=async()=>{
       try{
-        const res=await axios.post("http://localhost:5000/api/checkout/payment",{
+        const res=await axios.post("http://localhost:5000/checkout/payment",{
             tokenid:stripepayment.id,amount:200
         })
         console.log(res.data)
