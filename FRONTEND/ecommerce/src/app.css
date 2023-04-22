@@ -1,0 +1,23 @@
+.pay-button{
+    background-color: black;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50vh;
+  
+}
+.success-button{
+    background-color: green;
+    color: white;
+    margin: auto;
+    padding: 10px 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   margin-top: 50vh;
+}
