@@ -9,21 +9,24 @@ const Pay = () => {
 const[stripepayment,setstripepayment]=useState(null)
 const ontoken=(token)=>{
     setstripepayment(token)
-console.log(token)
+console.log(stripepayment)
   }
   useEffect(()=>{
     const makereq=async()=>{
       try{
-        const res=await axios.post("http://localhost:5000/checkout/payment",{
+        console.log("hello")
+        const res=await axios.post("http://localhost:5000/api/checkout/payment",{
+        
             tokenid:stripepayment.id,amount:200
         })
+        console.log("working")
         console.log(res.data)
       }
       catch(err){
         console.log(err)
       }
     }
-     stripepayment && makereq()
+   stripepayment && makereq()
   },[stripepayment])
     return (
    <StripeCheckout name="anjali shop" 
