@@ -5,7 +5,7 @@ import { sliderItems } from "../data";
 import styled from "styled-components";
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   background-color: coral;
 
@@ -50,7 +50,7 @@ const Imgcontainer = styled.div`
 `;
 
 const Image = styled.img`
-  height: 80%;
+  height: 100%;
 `;
 
 const Infocontainer = styled.div`
