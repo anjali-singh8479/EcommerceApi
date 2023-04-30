@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import styled from "styled-components"
 import {IoIosAdd} from "react-icons/io"
 import {IoRemove} from "react-icons/io5"
+import {mobile} from "../responsive"
 const Container=styled.div``
 const Wrapper=styled.div`
 padding:20px`
@@ -16,22 +17,44 @@ const Top=styled.div`
  display:flex;
  align-items:center;
  justify-content:space-between;
- padding:40px`
+ padding:40px;
+ @media only screen and (max-width: 380px) {
+  padding:40px 0;
+ }
+ `
 const Bottom=styled.div`
 display:flex;
-align-items:center`
+align-items:center;
+@media only screen and (max-width: 380px) {
+  flex-direction:column;
+ }
+`
 const TopButton=styled.button`
 padding:10px;
 font-weight:600;
 cursor:pointer;
 border:${props=>props.type==="filled" && "none"};
 background-color:${props=>props.type==="filled" ? "black":"transparent"};
-color:${props=>props.type==="filled" ? "white":"black"}`
-const TopTexts=styled.div``
+color:${props=>props.type==="filled" ? "white":"black"};
+@media only screen and (max-width: 380px) {
+ font-size:8px;
+ padding:15px;
+
+ }
+`
+const TopTexts=styled.div`
+display:flex;
+flex-direction:column;`
 const TopText=styled.span`
 text-decoration:underline;
 margin:10px;
-padding:10px`
+padding:10px;
+@media only screen and (max-width: 380px) {
+  font-size:10px;
+  padding:5px;
+  margin:0px;
+ }
+`
 const Info=styled.div`
 flex:3;
 ;
@@ -59,10 +82,18 @@ const Details=styled.div`
 padding:60px;
 display:flex;
 flex-direction:column;
-justify-content:space-around;`
+justify-content:space-around;
+@media only screen and (max-width: 380px) {
+ padding:30px
+ }`
 const Image=styled.img`
 width:200px;
-height:200px`
+height:200px;
+@media only screen and (max-width: 380px) {
+  width:100px;
+  height:100px;
+ }
+`
 const ProductName=styled.div``
 const ProductSize=styled.div``
 const ProductId=styled.div``
@@ -73,7 +104,11 @@ border-radius:50%;
 background-color:${props=>props.color}`
 const PriceDetails=styled.div`
 margin-right:10px;
-padding:60px;`
+padding:40px;
+@media only screen and (max-width: 380px) {
+ padding: 60px 0;
+ 
+ }`
 const ProductAmount=styled.div`
 
 font-size:24px;

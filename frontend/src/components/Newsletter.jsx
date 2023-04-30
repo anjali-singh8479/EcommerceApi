@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
-
+import {mobile} from "../responsive"
 const Container=styled.div`
 height:60vh;
 background-color:#fcf5f5;
@@ -18,6 +18,10 @@ const Description=styled.div`
 font-size:24px;
 font-weight:300;
 margin-bottom:12px;
+@media only screen and (max-width: 380px) {
+  
+  margin-left:50px
+}
 
 `
 const InputContainer=styled.div`
@@ -28,6 +32,10 @@ display:flex;
 justify-content:space-between;
 border:1px solid gray;
 border-radius:8px;
+@media only screen and (max-width: 380px) {
+  justify-content:center;
+  border:none;
+}
 `
 const Input=styled.input`
 border:none;
@@ -46,6 +54,9 @@ color:white;
 font-size:20px;
 font-weight:400;
 border-radius:0 8px 8px 0;
+@media only screen and (max-width: 380px) {
+  padding:0 20px
+}
 `
 
 const Newsletter = () => {

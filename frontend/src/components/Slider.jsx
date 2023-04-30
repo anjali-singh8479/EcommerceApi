@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { IoMdArrowDropright, IoMdArrowDropleft } from "react-icons/io";
 import { sliderItems } from "../data";
 import styled from "styled-components";
+import {mobile} from "../responsive"
 const Container = styled.div`
   width: 100%;
   height: 90vh;
@@ -11,6 +12,9 @@ const Container = styled.div`
 
   position: relative;
   overflow: hidden;
+  @media only screen and (max-width: 380px) {
+   display:none
+  }
 `;
 const Arrow = styled.div`
   width: 50px;

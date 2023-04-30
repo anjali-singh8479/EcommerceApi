@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/navbar.css";
 import { BiSearch } from "react-icons/bi";
 import {BsCart2} from "react-icons/bs"
+import {mobile} from "../responsive"
 const Navbar = () => {
   return (
     <>
@@ -10,7 +11,7 @@ const Navbar = () => {
           <div className="navbar-left">
             <span className="language">En</span>
             <div className="search-container">
-              <input className="navbar-input"></input>
+              <input className="navbar-input" placeholder="search"></input>
               <BiSearch  style={{color:"gray" , fontSize:"16px"}}/>
             </div>
           </div>

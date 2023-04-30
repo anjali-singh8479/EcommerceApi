@@ -26,6 +26,7 @@ height:350px;
 display:flex;
 align-items:center;
 justify-content:center;
+// background-color:red;
 position:relative;
 &:hover ${Info}{
     opacity:0.5;
@@ -35,7 +36,9 @@ const Circle=styled.div`
 width:200px;
 height:200px;
 border-radius:50%;
-background-color:white;
+
+z-index:2;
+position:absolute;
 `
 const Image=styled.img`
 height:75%;

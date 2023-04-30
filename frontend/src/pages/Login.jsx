@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
+import {mobile} from "../responsive"
 const Container=styled.div`
 width:100vw;
 height:100vh;
@@ -11,7 +12,10 @@ justify-content: center;
 const Wrapper=styled.div`
 padding:40px;
 width:40%
+@media only screen and (max-width: 380px) {
+ width:100%;
 
+}
 
 
 `
@@ -29,7 +33,13 @@ flex:1;
 margin:20px 10px 0px 0px;
 min-width:40%;
 padding:10px;
-outline:none;`
+outline:none;
+border:1px solid gray;
+// @media only screen and (max-width: 380px) {
+//   border:1px solid gray
+//  }
+ `
+
 
 const Button=styled.button`
 width:40%;
@@ -43,6 +53,7 @@ cursor:pointer;
 color:teal;
 margin:5px;
 font-size:12px;
+display:flex;
 
 `
 const Login = () => {

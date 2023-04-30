@@ -27,7 +27,12 @@ flex:1;
 margin:20px 10px 0px 0px;
 min-width:40%;
 padding:10px;
-outline:none;`
+outline:none;
+border:1px solid gray;
+@media only screen and (max-width: 380px) {
+  border:1px solid gray;
+ }
+`
 const Agreement=styled.div`
 font-size:12px;
 margin:20px 0`
