@@ -93,6 +93,7 @@ router.get("/find/:id",async(req,res)=>{
 })
 //get all products 
 router.get("/allproducts",async (req,res)=>{
+    console.log("api work2")
     const qnew=req.query.new
     const qcategory=req.query.category
     if(qnew){

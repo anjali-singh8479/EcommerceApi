@@ -3,6 +3,7 @@ import { BiSearch } from 'react-icons/bi'
 import { BsCart2 } from 'react-icons/bs'
 import {AiFillHeart } from "react-icons/ai"
 import styled from "styled-components"
+import { Link } from 'react-router-dom'
 const Info=styled.div`
 width:100%;
 height:100%;
@@ -72,7 +73,9 @@ const Product = ({item}) => {
             <BsCart2></BsCart2>
         </Icon>
         <Icon>
-            <BiSearch></BiSearch>
+           <Link to={`product/${item._id}`}>
+           <BiSearch></BiSearch>
+           </Link>
         </Icon>
         <Icon>
         <AiFillHeart></AiFillHeart>

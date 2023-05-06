@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import "../../src/app.css"
+
 import StripeCheckout from 'react-stripe-checkout';
 import axios from "axios"
 

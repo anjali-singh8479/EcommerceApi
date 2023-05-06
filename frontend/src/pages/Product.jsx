@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import Announcement from "../components/Announcement";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
+import axios from "axios";
 const Container = styled.div``;
 const Wrapper = styled.div`
   display: flex;
@@ -54,9 +56,9 @@ const Filter = styled.div`
   align-items: center;
   margin-right: 20px;
   @media only screen and (max-width: 380px) {
-    margin:0;
-    padding:10px;
-   }
+    margin: 0;
+    padding: 10px;
+  }
 `;
 
 const FilterText = styled.div`
@@ -75,27 +77,26 @@ const Select = styled.select`
   padding: 10px;
   margin: 0 10px;
   @media only screen and (max-width: 380px) {
-    border:1px solid gray;
-    margin-left:20px;
-    
-   }
+    border: 1px solid gray;
+    margin-left: 20px;
+  }
 `;
 const Option = styled.option`
-@media only screen and (max-width: 380px) {
-  font-size:10px;
-  transition:none;
-  outline:none;
-
- }`;
+  @media only screen and (max-width: 380px) {
+    font-size: 10px;
+    transition: none;
+    outline: none;
+  }
+`;
 const AddContainer = styled.div`
   display: flex;
   align-items: center;
   width: 50%;
   @media only screen and (max-width: 380px) {
-    width:100%;
-    margin:40px 0;
-    justify-content:center;
-   }
+    width: 100%;
+    margin: 40px 0;
+    justify-content: center;
+  }
 `;
 const AmountContainer = styled.div`
   display: flex;
@@ -123,14 +124,17 @@ const Button = styled.button`
     color: white;
   }
   @media only screen and (max-width: 380px) {
-   padding: 10px 40px
-   }
+    padding: 10px 40px;
+  }
 `;
 const Remove = styled.div`
   margin-left: 20px;
 `;
 const Add = styled.div``;
 const Product = () => {
+  const location =useLocation();
+  const id=location.pathname.split("/")[2]
+  const [product,setproduct]=useState({})
   return (
     <Container>
       <Navbar></Navbar>

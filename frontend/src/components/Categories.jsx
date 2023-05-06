@@ -5,8 +5,9 @@ import CategoriesItem from './CategoriesItem'
 import {mobile} from "../responsive"
 const Container=styled.div`
 display:flex;
-padding:20px;
-justify-content:space-between;
+padding:20px 0px;
+justify-content:space-around;
+
 @media only screen and (max-width: 380px) {
 padding:0px;
 flex-direction:column;  

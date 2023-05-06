@@ -4,7 +4,7 @@ const cryptoJS=require("crypto-js")
 const router = require("express").Router();
 
 //update user
-router.put("/:id",verifyAndAuthorization,async(req,res)=>{
+router.put("/:id",async(req,res)=>{
     if(req.body.password){
         const hashedpassword= cryptoJS.AES.encrypt(req.body.password,process.env.PASSWORD_SECRET).toString()
         req.body.password=hashedpassword
